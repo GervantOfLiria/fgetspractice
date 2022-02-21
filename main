@@ -1,0 +1,11 @@
+#include <stdio.h>
+int main()
+{
+    char a[12];
+    printf("Enter a number pls: ");
+    fgets(a, 12, stdin); //input smth like 78005553535
+    printf("you enterd: %s\n",a);
+    printf("+%c-%c%c%c-%c%c%c-%c%c-%c%c", a[0],a[1],a[2],a[3],a[4],a[5],a[6],a[7],a[8],a[9],a[10],a[11]); // output +7-800-555-35-35
+    //kinda grotesque but it works
+    return 0;
+}
