@@ -1,0 +1,30 @@
+#define _CRT_SECURE_NO_WARNINGS
+#define max 100
+#include <stdlib.h>
+#include <stdio.h>
+int main() {
+	char a;
+	int i = 0;
+	char* p = &a;
+	p = (char*)malloc(max * sizeof(char)); //makin an array
+	while (i < max) {                      // setting all the random boys to 0
+		p[i] = 0;
+		i++;
+	}
+	i = 0;
+	printf("Enter up to %d chars:	", max);
+	fgets(p, max, stdin);
+	while(p[i] != 0) {                  // this cycle keeps printing the words until it meets one of the remaining zeros
+		while (p[i] != ' ' & p[i] != 0) { // this cycle prints a word until it meets space or a zero (since it means that the string ended)
+			printf("%c", p[i]);
+			i++;
+		}
+		printf("//////");
+		i++;
+	}	
+	printf("Finish");
+	return(0);
+}
+
+//input  kiss smack lol love
+//output kiss//////smack//////lol//////love////////////Finish
