@@ -1,0 +1,20 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdlib.h>
+#include <stdio.h>
+int main() {
+	int a;
+	int i = 0;
+	int* p = &a;
+	p = (int*)malloc(15 * sizeof(int));       // Im trying to like "add" some variables depending on the input, using malloc
+	printf("enter a number");
+	scanf ("%d", &a);
+	while (i !	= a) {
+		p [i] = a - i;
+		printf("%d", p[i]);
+		i++;
+	}
+
+	return(0);
+}
+// Input: 5
+// Output: 5 4 3 2 1, while all the numbers are "summoned" using their * adresses, Im proud of myself
